@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HW Week 2</title>
+
+</head>
+
+<body>
+
+    <Div>
+        <p id="hangword"></p>
+    </Div>
+    <div>
+        <p id="misses"></p>
+    </div>
+    <script>
+        // Computer has a set of phrases
+        var computerChoices = [
+            ["t", "e", "s", "t"],
+            ["c", "o", "m", "p", "u", "t", "e", "r"],
+            ["w", "o", "r", "d", "s"],
+            ["a", "t", "t", "a", "c", "k"]
+        ];
+        // One phrase is randomly selected
+        var computerPick = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+        // A loop is run for the length of the chosen phrase to write the blanks for the selected phrase
+
+
+        for (var i = 0; i < computerPick.length; i++) {
+            computerChoices[i] = "_ ";
+            // So the .innerHTML does not overwrite itself use inner = inner + var
+            document.getElementById("hangword").innerHTML = document.getElementById("hangword").innerHTML + computerChoices[i];
+        }
+        // User inputs a guess
+        document.onkeyup = function(event) {
+            var userGuess = event.key;
+            var letter = String.fromCharCode(event.keyCode).toLowerCase();
+            var tmpArray = [];
+            var missesArray = [];
+            for (var i = 0; i < computerPick.length; i++) {
+
+                if (computerPick[i] === letter) {
+                    tmpArray.push(i);
+                }
+                else {
+                    tmpArray.push("_");
+                }
+                document.getElementById("hangword").innerHTML = tmpArray;
+                console.log(tmpArray)
+                console.log(missesArray)
+
+            }
+
+        }
+    </script>
+</body>
+
+</html
