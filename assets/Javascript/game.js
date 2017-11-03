@@ -4,7 +4,8 @@ var computerChoices = [
     ["a", "l", "l", "y", "o", "u", "r", "b", "a", "s", "e"],
     ["r", "i", "c", "k", "r", "o", "l", "l"],
     ["l", "o", "l", "c", "a", "t", "s"],
-    ["b", "a", "d", "g", "e", "r"]
+    ["b", "a", "d", "g", "e", "r"],
+    ["l", "e", "e", "r", "o", "y", "j", "e", "n", "k", "i", "n", "s"]
 ];
 // One phrase is randomly selected
 var computerPick = computerChoices[Math.floor(Math.random() * computerChoices.length)];
