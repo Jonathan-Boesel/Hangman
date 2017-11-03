@@ -1,9 +1,10 @@
 // Computer has a set of phrases
 var computerChoices = [
-    ["t", "e", "s", "t"],
-    ["c", "o", "m", "p", "u", "t", "e", "r"],
-    ["w", "o", "r", "d", "s"],
-    ["a", "t", "t", "a", "c", "k"]
+    ["c", "e", "i", "l", "i", "n", "g", "c", "a", "t"],
+    ["a", "l", "l", "y", "o", "u", "r", "b", "a", "s", "e"],
+    ["r", "i", "c", "k", "r", "o", "l", "l"],
+    ["l", "o", "l", "c", "a", "t", "s"],
+    ["b", "a", "d", "g", "e", "r"]
 ];
 // One phrase is randomly selected
 var computerPick = computerChoices[Math.floor(Math.random() * computerChoices.length)];
